@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class ParallelBroadcastReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-        if(intent.getAction().equals(Constants.PARALLEL_BROADCAST)){
+        if(intent.getAction().equals(BroadcastDemoConstants.PARALLEL_BROADCAST)){
             Toast.makeText(context, "we just got a ParallelBroadcastReceiver", Toast.LENGTH_LONG).show();
         }
     }

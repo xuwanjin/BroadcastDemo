@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class OrderedBroadcastReceiverLowPriority extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-        if (intent.getAction().equals(Constants.ORDERED_BROADCAST)) {
+        if (intent.getAction().equals(BroadcastDemoConstants.ORDERED_BROADCAST)) {
             Toast.makeText(context, "this is Low priority broadcast", Toast.LENGTH_LONG).show();
         }
     }
