@@ -20,11 +20,30 @@
         <receiver android:name=".ParallelBroadcastReceiver">
 
             <intent-filter>
-                <action android:name="com.example.xuwanjin.broadcastdemo.BroadcastDemoActivity">
+                <action android:name="com.example.xuwanjin.broadcastdemo.parallelbroadcast">
 
                 </action>
             </intent-filter>
         </receiver>
+
+        <receiver android:name=".OrderedBroadcastReceiverHighPriority">
+            <intent-filter android:priority="1000">
+                <action android:name="com.example.xuwanjin.broadcastdemo.orderedbroadcast">
+
+                </action>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".OrderedBroadcastReceiverLowPriority">
+
+            <intent-filter android:priority="200">
+                <action android:name="com.example.xuwanjin.broadcastdemo.orderedbroadcast">
+
+                </action>
+            </intent-filter>
+
+        </receiver>
+
     </application>
 
 </manifest>

@@ -5,11 +5,22 @@
     android:layout_height="match_parent"
     tools:context="com.example.xuwanjin.broadcastdemo.BroadcastDemoActivity">
 
-    <Button
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/send_parallel_broadcast_intent"
-        android:text="@string/send_parallel_broadcast_intent"
-        />
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/send_parallel_broadcast_intent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/send_parallel_broadcast_intent" />
+
+        <Button
+            android:id="@+id/send_ordered_broadcast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/send_ordered_broadcast" />
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
