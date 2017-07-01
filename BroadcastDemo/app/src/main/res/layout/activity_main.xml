@@ -21,6 +21,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/send_ordered_broadcast" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/local_broadcast"
+            android:text="@string/send_local_broadcast"
+            />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
