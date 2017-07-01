@@ -55,7 +55,6 @@ public class BroadcastDemoActivity extends AppCompatActivity {
                 Intent localBroadcastIntent = new Intent();
                 localBroadcastIntent.setAction(LOCAL_BROADCAST);
                 localBroadcastManager.sendBroadcast(localBroadcastIntent);
-                localBroadcastManager.sendBroadcastSync();
             }
         });
 
