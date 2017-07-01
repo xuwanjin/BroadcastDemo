@@ -3,6 +3,7 @@
     <string name="send_parallel_broadcast_intent">Send Parallel Broadcast</string>
     <string name="send_ordered_broadcast">Send Ordered Broadcast</string>
     <string name="send_local_broadcast">Send Local Broadcast</string>
+    <string name="send_sticky_broadcast">Send Sticky Broadcast</string>
     <string name="parallel_broadcast">com.example.xuwanjin.broadcastdemo.parallelbroadcast</string>
     <string name="ordered_broadcast">com.example.xuwanjin.broadcastdemo.orderedbroadcast</string>
 </resources>

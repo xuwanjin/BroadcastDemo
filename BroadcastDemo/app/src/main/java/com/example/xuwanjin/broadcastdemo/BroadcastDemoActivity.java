@@ -14,12 +14,14 @@ import android.widget.Toast;
 import static com.example.xuwanjin.broadcastdemo.BroadcastDemoConstants.LOCAL_BROADCAST;
 import static com.example.xuwanjin.broadcastdemo.BroadcastDemoConstants.ORDERED_BROADCAST;
 import static com.example.xuwanjin.broadcastdemo.BroadcastDemoConstants.PARALLEL_BROADCAST;
+import static com.example.xuwanjin.broadcastdemo.BroadcastDemoConstants.STICKY_BROADCAST;
 
 public class BroadcastDemoActivity extends AppCompatActivity {
 
     Button sendParallelBroadcast = null;
     Button sendOrderedBroadcast = null;
     Button sendLocalBroadcast = null;
+    Button sendStickyBroadcast = null;
     LocalBroadcastManager localBroadcastManager = null;
     BroadcastReceiver localBroadcastReceiver = null;
 
@@ -58,6 +60,15 @@ public class BroadcastDemoActivity extends AppCompatActivity {
             }
         });
 
+        sendStickyBroadcast = (Button) findViewById(R.id.send_sticky_broadcast);
+        sendStickyBroadcast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent stickyBroadcastIntent = new Intent();
+                stickyBroadcastIntent.setAction(STICKY_BROADCAST);
+                sendStickyBroadcast(stickyBroadcastIntent);
+            }
+        });
     }
 
     public void localBroadcastReceiverRegister() {
