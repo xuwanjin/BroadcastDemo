@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BroadcastDemo</string>
+    <string name="send_parallel_broadcast_intent">Send Parallel Broadcast</string>
 </resources>
