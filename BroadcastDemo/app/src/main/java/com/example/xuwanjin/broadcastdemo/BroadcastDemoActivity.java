@@ -49,17 +49,6 @@ public class BroadcastDemoActivity extends AppCompatActivity {
             }
         });
 
-        localBroadcastReceiverRegister();
-        sendLocalBroadcast = (Button) findViewById(R.id.local_broadcast);
-        sendLocalBroadcast.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent localBroadcastIntent = new Intent();
-                localBroadcastIntent.setAction(LOCAL_BROADCAST);
-                localBroadcastManager.sendBroadcast(localBroadcastIntent);
-            }
-        });
-
         sendStickyBroadcast = (Button) findViewById(R.id.send_sticky_broadcast);
         sendStickyBroadcast.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,6 +58,18 @@ public class BroadcastDemoActivity extends AppCompatActivity {
                 sendStickyBroadcast(stickyBroadcastIntent);
             }
         });
+
+        localBroadcastReceiverRegister();
+        sendLocalBroadcast = (Button) findViewById(R.id.send_local_broadcast);
+        sendLocalBroadcast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent localBroadcastIntent = new Intent();
+                localBroadcastIntent.setAction(LOCAL_BROADCAST);
+                localBroadcastManager.sendBroadcast(localBroadcastIntent);
+            }
+        });
+
     }
 
     public void localBroadcastReceiverRegister() {

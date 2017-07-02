@@ -25,16 +25,18 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/local_broadcast"
-            android:text="@string/send_local_broadcast"
+            android:id="@+id/send_sticky_broadcast"
+            android:text="@string/send_sticky_broadcast"
             />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/send_sticky_broadcast"
-            android:text="@string/send_sticky_broadcast"
+            android:id="@+id/send_local_broadcast"
+            android:text="@string/send_local_broadcast"
             />
+
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
