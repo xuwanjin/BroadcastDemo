@@ -53,6 +53,13 @@
             </intent-filter>
         </receiver>
 
+        <receiver android:name=".RegisterBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_CHANGED">
+                </action>
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>

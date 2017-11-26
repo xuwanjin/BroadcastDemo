@@ -36,6 +36,13 @@
             android:text="@string/send_local_broadcast"
             />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/register_broadcast"
+            android:text="@string/register_broadcast"
+            />
+
 
     </LinearLayout>
 

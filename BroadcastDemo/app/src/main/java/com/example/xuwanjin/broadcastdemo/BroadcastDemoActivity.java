@@ -22,6 +22,7 @@ public class BroadcastDemoActivity extends AppCompatActivity {
     Button sendOrderedBroadcast = null;
     Button sendLocalBroadcast = null;
     Button sendStickyBroadcast = null;
+    Button registerBroadcast = null;
     LocalBroadcastManager localBroadcastManager = null;
     BroadcastReceiver localBroadcastReceiver = null;
 
@@ -70,6 +71,16 @@ public class BroadcastDemoActivity extends AppCompatActivity {
             }
         });
 
+        registerBroadcast = (Button) findViewById(R.id.register_broadcast);
+        registerBroadcast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                IntentFilter intentFilter = new IntentFilter();
+                intentFilter.addAction(Intent.ACTION_BATTERY_CHANGED);
+                registerReceiver(new RegisterBroadcastReceiver(), intentFilter);
+            }
+        });
+
     }
 
     public void localBroadcastReceiverRegister() {
@@ -87,6 +98,7 @@ public class BroadcastDemoActivity extends AppCompatActivity {
         localBroadcastManager.registerReceiver(localBroadcastReceiver , intentFilter);
 
     }
+
 
     @Override
     protected void onDestroy() {
